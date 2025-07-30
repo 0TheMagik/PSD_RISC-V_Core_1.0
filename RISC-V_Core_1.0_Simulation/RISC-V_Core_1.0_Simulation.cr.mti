@@ -1,0 +1,118 @@
+D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Decoder
+-- Compiling architecture rtl of Decoder
+
+} {} {}} D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Counter.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Counter.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Program_Counter
+-- Compiling architecture rtl of Program_Counter
+
+} {} {}} D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Memory.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Memory.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Program_Memory
+-- Compiling architecture rtl of Program_Memory
+
+} {} {}} D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Mux2to1
+-- Compiling architecture rtl of Mux2to1
+
+} {} {}} D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Data_Memory.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Data_Memory.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Data_Memory
+-- Compiling architecture rtl of Data_Memory
+
+} {} {}} D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Fetch.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Fetch.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity State_Fetch
+-- Compiling architecture rtl of State_Fetch
+
+} {} {}} D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/ALU.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/ALU.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALU
+-- Compiling architecture rtl of ALU
+
+} {} {}} D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Execute.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Execute.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity State_Execute
+-- Compiling architecture rtl of State_Execute
+
+} {} {}} D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to1.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to1.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Mux32to1
+-- Compiling architecture rtl of Mux32to1
+
+} {} {}} D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Decode.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Decode.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity State_Decode
+-- Compiling architecture rtl of State_Decode
+
+} {} {}} D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/RegFile.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/RegFile.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RegFile
+-- Compiling architecture Behavioral of RegFile
+
+} {} {}} D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Jump_Branch_Unit.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Jump_Branch_Unit.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Jump_Branch_Unit
+-- Compiling architecture rtl of Jump_Branch_Unit
+
+} {} {}} D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_WB.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_WB.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity State_WB
+-- Compiling architecture rtl of State_WB
+
+} {} {}}
