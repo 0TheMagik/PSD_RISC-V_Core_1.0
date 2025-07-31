@@ -7,21 +7,23 @@ use IEEE.numeric_std.all;
 
 entity Decoder is
     port (
-        clk             : in std_logic;
-        rst             : in std_logic;
-        instruction     : in std_logic_vector(31 downto 0);
-        reg_address_0   : out std_logic_vector(4 downto 0);
-        reg_address_1   : out std_logic_vector(4 downto 0);
-        reg_address_dst : out std_logic_vector(4 downto 0);
-        immediate       : out std_logic_vector(31 downto 0);
-        alu_op          : out std_logic_vector(3 downto 0);
-        mux_2_1_alu_sel : out std_logic;
-        wr_back_en      : out std_logic;
-        mux_2_1_wb_sel  : out std_logic;
+        clk                 : in std_logic;
+        rst                 : in std_logic;
+        instruction         : in std_logic_vector(31 downto 0);
+        reg_address_0       : out std_logic_vector(4 downto 0);
+        reg_address_1       : out std_logic_vector(4 downto 0);
+        reg_address_dst     : out std_logic_vector(4 downto 0);
+        immediate           : out std_logic_vector(31 downto 0);
+        alu_op              : out std_logic_vector(3 downto 0);
+        mux_2_1_alu_sel     : out std_logic;
+        wr_back_en          : out std_logic;
+        mux_2_1_wb_sel      : out std_logic;
+        data_mem_write_en   : out std_logic;
+        data_mem_format     : out std_logic_vector(2 downto 0);
 
         -- Jump branch unit output
-        jump_branch_unit_op  : out std_logic_vector(3 downto 0);
-        jump_branch_unit_en  : out std_logic
+        jump_branch_unit_op : out std_logic_vector(3 downto 0);
+        jump_branch_unit_en : out std_logic
     );
 end entity Decoder;
 
@@ -297,15 +299,39 @@ begin
             jump_branch_unit_en <= '0';
             wr_back_en          <= '0';
             mux_2_1_wb_sel      <= '0';
+            data_mem_write_en   <= '0';
+            data_mem_format     <= (others => '0');
 
         elsif rising_edge(clk) then
             case opMAP is
                 when LOAD =>
+                    reg_address_0       <= instruction(19 downto 15);
+                    reg_address_1       <= (others => '0');
+                    reg_address_dst     <= instruction(11 downto 7);
+                    immediate           <= std_logic_vector(resize(signed(instruction(31 downto 20)), 32));
+                    alu_op              <= "0000";
+                    mux_2_1_alu_sel     <= '1';
+                    jump_branch_unit_op <= (others => '0');
+                    jump_branch_unit_en <= '0';
+                    wr_back_en          <= '1';
                     mux_2_1_wb_sel      <= '1';
-                    
+                    data_mem_write_en   <= '0';
+                    data_mem_format     <= instruction(14 downto 12);
+
                 
                 when STORE => 
+                    reg_address_0       <= instruction(19 downto 15);
+                    reg_address_1       <= instruction(24 downto 20);
+                    reg_address_dst     <= (others => '0');
+                    immediate           <= std_logic_vector(resize(signed(instruction(31 downto 25) & instruction (11 downto 7)), 32));
+                    alu_op              <= "0000";
+                    mux_2_1_alu_sel     <= '1';
+                    jump_branch_unit_op <= (others => '0');
+                    jump_branch_unit_en <= '0';
+                    wr_back_en          <= '0';
                     mux_2_1_wb_sel      <= '0';
+                    data_mem_write_en   <= '1';
+                    data_mem_format     <= instruction(14 downto 12);
 
                 when BRANCH => 
                     reg_address_0       <= instruction(19 downto 15); 
@@ -318,6 +344,8 @@ begin
                     mux_2_1_alu_sel     <= '0';
                     wr_back_en          <= '0';
                     mux_2_1_wb_sel      <= '0';
+                    data_mem_write_en   <= '0';
+                    data_mem_format     <= (others => '0');
 
 
                 when JALR => 
@@ -331,6 +359,8 @@ begin
                     mux_2_1_alu_sel     <= '1';
                     wr_back_en          <= '1';
                     mux_2_1_wb_sel      <= '0';
+                    data_mem_write_en   <= '0';
+                    data_mem_format     <= (others => '0');
 
                 when JAL => 
                     reg_address_0       <= (others => '0');
@@ -343,6 +373,8 @@ begin
                     mux_2_1_alu_sel     <= '1';
                     wr_back_en          <= '1';
                     mux_2_1_wb_sel      <= '0';
+                    data_mem_write_en   <= '0';
+                    data_mem_format     <= (others => '0');
 
                 when OP_IMM => 
                     reg_address_0       <= instruction(19 downto 15);
@@ -353,6 +385,8 @@ begin
                     jump_branch_unit_en <= '0';
                     wr_back_en          <= '1';
                     mux_2_1_wb_sel      <= '0';
+                    data_mem_write_en   <= '0';
+                    data_mem_format     <= (others => '0');
 
                     case decode_op is
                         when ADDI | SLTI | SLTIU | XORI | ORI | ANDI=>
@@ -378,12 +412,15 @@ begin
                     reg_address_0       <= instruction(19 downto 15); 
                     reg_address_1       <= instruction(24 downto 20); 
                     reg_address_dst     <= instruction(11 downto 7);
+                    immediate           <= (others => '0');
                     alu_op              <= instruction(30) & instruction(14 downto 12);
                     mux_2_1_alu_sel     <= '0';
                     jump_branch_unit_op <= (others => '0');
                     jump_branch_unit_en <= '0';
                     wr_back_en          <= '1';
                     mux_2_1_wb_sel      <= '0';
+                    data_mem_write_en   <= '0';
+                    data_mem_format     <= (others => '0');
 
                 when AUIPC => 
                     -- reg_address_0   <= (others => '0');
@@ -395,6 +432,18 @@ begin
                     -- jump_branch_unit_en <= '0';
 
                 when LUI => 
+                    reg_address_0       <= (others => '0'); 
+                    reg_address_1       <= (others => '0'); 
+                    reg_address_dst     <= instruction(11 downto 7);
+                    immediate           <= instruction(31 downto 12) & "000000000000";
+                    alu_op              <= "0000";
+                    mux_2_1_alu_sel     <= '1';
+                    jump_branch_unit_op <= (others => '0');
+                    jump_branch_unit_en <= '0';
+                    wr_back_en          <= '1';
+                    mux_2_1_wb_sel      <= '0';
+                    data_mem_write_en   <= '0';
+                    data_mem_format     <= (others => '0');
 
                 when INVALID => 
                     reg_address_0       <= (others => '0');
@@ -407,6 +456,8 @@ begin
                     jump_branch_unit_en <= '0';
                     wr_back_en          <= '0';
                     mux_2_1_wb_sel      <= '0';
+                    data_mem_write_en   <= '0';
+                    data_mem_format     <= (others => '0');
 
                 when others =>
                     

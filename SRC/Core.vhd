@@ -60,6 +60,8 @@ architecture rtl of Core is
         mux_2_1_alu_sel     : out std_logic;
         wr_back_en          : out std_logic;
         mux_2_1_wb_sel      : out std_logic;
+        data_mem_write_en   : out std_logic;
+        data_mem_format     : out std_logic_vector(2 downto 0);
         jump_branch_unit_op : out std_logic_vector(3 downto 0);
         jump_branch_unit_en : out std_logic
     );
@@ -67,26 +69,31 @@ architecture rtl of Core is
 
     component State_Execute 
     port (
-        clk_state           : in std_logic;
-        rst_state           : in std_logic;
-        en                  : in std_logic;
-        reg_file_in_0       : in std_logic_vector(31 downto 0);
-        reg_file_in_1       : in std_logic_vector(31 downto 0);
-        reg_addr_dst_in     : in std_logic_vector(4 downto 0);
-        immediate           : in std_logic_vector(31 downto 0);
-        alu_op              : in std_logic_vector(3 downto 0);
-        mux_2_1_alu_sel     : in std_logic;
-        wr_back_en_in       : in std_logic;
-        mux_2_1_wb_sel_in   : in std_logic;
-        pc_current          : in std_logic_vector(31 downto 0);
-        jump_branch_unit_op : in std_logic_vector(3 downto 0);
-        jump_branch_unit_en : in std_logic;
-        alu_out             : out std_logic_vector(31 downto 0);
-        pc_next             : out std_logic_vector(31 downto 0);
-        jump_branch_flag    : out std_logic;
-        reg_addr_dst_out    : out std_logic_vector(4 downto 0);
-        wr_back_en_out      : out std_logic;
-        mux_2_1_wb_sel_out  : out std_logic
+        clk_state               : in std_logic;
+        rst_state               : in std_logic;
+        en                      : in std_logic;
+        reg_file_in_0           : in std_logic_vector(31 downto 0);
+        reg_file_in_1           : in std_logic_vector(31 downto 0);
+        reg_addr_dst_in         : in std_logic_vector(4 downto 0);
+        immediate               : in std_logic_vector(31 downto 0);
+        alu_op                  : in std_logic_vector(3 downto 0);
+        mux_2_1_alu_sel         : in std_logic;
+        wr_back_en_in           : in std_logic;
+        mux_2_1_wb_sel_in       : in std_logic;
+        data_mem_write_en_in    : in std_logic;
+        data_mem_format_in      : in std_logic_vector(2 downto 0);
+        pc_current              : in std_logic_vector(31 downto 0);
+        jump_branch_unit_op     : in std_logic_vector(3 downto 0);
+        jump_branch_unit_en     : in std_logic;
+        alu_out                 : out std_logic_vector(31 downto 0);
+        pc_next                 : out std_logic_vector(31 downto 0);
+        jump_branch_flag        : out std_logic;
+        reg_addr_dst_out        : out std_logic_vector(4 downto 0);
+        wr_back_en_out          : out std_logic;
+        mux_2_1_wb_sel_out      : out std_logic;
+        data_mem_write_en_out   : out std_logic;
+        data_mem_format_out     : out std_logic_vector(2 downto 0);
+        data_mem_data_in        : out std_logic_vector(31 downto 0)
     );
     end component;
 
@@ -95,7 +102,7 @@ architecture rtl of Core is
         clk_state           : in std_logic;
         rst_state           : in std_logic;
         en_state            : in std_logic;
-        data_mem_load_en    : in std_logic;
+        data_mem_write_en   : in std_logic;
         data_mem_format     : in std_logic_vector(2 downto 0);
         data_mem_data_in    : in std_logic_vector(31 downto 0);
         data_mem_address    : in std_logic_vector(31 downto 0);
@@ -131,7 +138,8 @@ architecture rtl of Core is
     signal decode_execute_mux_2_1_alu_sel       : std_logic;                                -- out-in
     signal decode_execute_wrback_en             : std_logic;                                -- out-in
     signal decode_execute_mux_2_1_wb_sel        : std_logic;
-
+    signal decode_execute_data_mem_write_en     : std_logic;
+    signal decode_execute_data_mem_format       : std_logic_vector(2 downto 0);
     signal decode_execute_jump_branch_unit_op   : std_logic_vector(3 downto 0);             -- out-in
     signal decode_execute_jump_branch_unit_en   : std_logic;                                -- out-in
 
@@ -146,6 +154,9 @@ architecture rtl of Core is
     signal execute_wb_reg_addr_dst              : std_logic_vector(4 downto 0);
     signal execute_wb_wr_back_en                : std_logic;                                -- out-in
     signal execute_wb_mux_2_1_wb_sel            : std_logic;                                -- out-in
+    signal execute_wb_data_mem_write_en         : std_logic;                                -- out-in
+    signal execute_wb_data_mem_format           : std_logic_vector(2 downto 0);             -- out-in
+    signal execute_wb_data_mem_data             : std_logic_vector(31 downto 0);
     
     -- WR_BACK to Register
     signal wb_decode_data                       : std_logic_vector(31 downto 0);
@@ -186,32 +197,39 @@ begin
         mux_2_1_alu_sel     => decode_execute_mux_2_1_alu_sel,      -- out
         wr_back_en          => decode_execute_wrback_en,            -- out
         mux_2_1_wb_sel      => decode_execute_mux_2_1_wb_sel,       -- out
+        data_mem_write_en   => decode_execute_data_mem_write_en,    -- out
+        data_mem_format     => decode_execute_data_mem_format,      -- out
         jump_branch_unit_op => decode_execute_jump_branch_unit_op,  -- out
         jump_branch_unit_en => decode_execute_jump_branch_unit_en   -- out
     );
 
     Execute_inst : State_Execute 
     port map(
-        clk_state           => clk,
-        rst_state           => rst,
-        en                  => en_execute,
-        reg_file_in_0       => decode_execute_reg_file_0,           -- in
-        reg_file_in_1       => decode_execute_reg_file_1,           -- in
-        reg_addr_dst_in     => decode_execute_reg_addr_dst,         -- in
-        immediate           => decode_execute_immediate,            -- in
-        alu_op              => decode_execute_alu_op,               -- in
-        mux_2_1_alu_sel     => decode_execute_mux_2_1_alu_sel,      -- in
-        wr_back_en_in       => decode_execute_wrback_en,            -- in
-        mux_2_1_wb_sel_in   => decode_execute_mux_2_1_wb_sel,       -- in
-        pc_current          => decode_execute_pc_current,           -- in
-        jump_branch_unit_op => decode_execute_jump_branch_unit_op,  -- in
-        jump_branch_unit_en => decode_execute_jump_branch_unit_en,  -- in
-        alu_out             => execute_wb_alu_out,                  -- out
-        pc_next             => execute_fetch_pc_next,               -- out
-        jump_branch_flag    => execute_fetch_jump_branch_flag,      -- out
-        reg_addr_dst_out    => execute_wb_reg_addr_dst,             -- out
-        wr_back_en_out      => execute_wb_wr_back_en,               -- out
-        mux_2_1_wb_sel_out  => execute_wb_mux_2_1_wb_sel            -- out
+        clk_state               => clk,
+        rst_state               => rst,
+        en                      => en_execute,
+        reg_file_in_0           => decode_execute_reg_file_0,           -- in
+        reg_file_in_1           => decode_execute_reg_file_1,           -- in
+        reg_addr_dst_in         => decode_execute_reg_addr_dst,         -- in
+        immediate               => decode_execute_immediate,            -- in
+        alu_op                  => decode_execute_alu_op,               -- in
+        mux_2_1_alu_sel         => decode_execute_mux_2_1_alu_sel,      -- in
+        wr_back_en_in           => decode_execute_wrback_en,            -- in
+        mux_2_1_wb_sel_in       => decode_execute_mux_2_1_wb_sel,       -- in
+        data_mem_write_en_in    => decode_execute_data_mem_write_en,    -- in
+        data_mem_format_in      => decode_execute_data_mem_format,      -- in
+        pc_current              => decode_execute_pc_current,           -- in
+        jump_branch_unit_op     => decode_execute_jump_branch_unit_op,  -- in
+        jump_branch_unit_en     => decode_execute_jump_branch_unit_en,  -- in
+        alu_out                 => execute_wb_alu_out,                  -- out
+        pc_next                 => execute_fetch_pc_next,               -- out
+        jump_branch_flag        => execute_fetch_jump_branch_flag,      -- out
+        reg_addr_dst_out        => execute_wb_reg_addr_dst,             -- out
+        wr_back_en_out          => execute_wb_wr_back_en,               -- out
+        mux_2_1_wb_sel_out      => execute_wb_mux_2_1_wb_sel,           -- out
+        data_mem_write_en_out   => execute_wb_data_mem_write_en,        -- out 
+        data_mem_format_out     => execute_wb_data_mem_format,          -- out
+        data_mem_data_in        => execute_wb_data_mem_data             -- out
     );
 
     WB_inst : State_WB
@@ -219,10 +237,10 @@ begin
         clk_state           => clk,                                 -- in
         rst_state           => rst,                                 -- in
         en_state            => en_wb,                               -- in
-        data_mem_load_en    => '0',                                 -- in this is not final
-        data_mem_format     => "000",                               -- in this is not final
-        data_mem_data_in    => x"00000000",                         -- in this is not final
-        data_mem_address    => x"00000000",                         -- in this is not final
+        data_mem_write_en   => execute_wb_data_mem_write_en,        -- in this is not final
+        data_mem_format     => execute_wb_data_mem_format,          -- in this is not final
+        data_mem_data_in    => execute_wb_data_mem_data,            -- in this is not final
+        data_mem_address    => execute_wb_alu_out,                  -- in this is not final
         alu_reslt_in        => execute_wb_alu_out,                  -- in
         reg_addr_dst_in     => execute_wb_reg_addr_dst,             -- in
         wr_back_en_in       => execute_wb_wr_back_en,               -- in
@@ -261,6 +279,7 @@ begin
 
             when FETCH =>
                 -- rst_pc <= '0';
+                en_wb <= '1';
                 en_fetch <= '1';
                 if en_load = '1' then
                     next_state <= LOAD_PC;

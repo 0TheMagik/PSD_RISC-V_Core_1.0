@@ -21,7 +21,8 @@ entity State_Fetch is
         load_addr   : in std_logic_vector(31 downto 0);
 
         -- address out
-        instruction : out std_logic_vector(31 downto 0)
+        instruction         : out std_logic_vector(31 downto 0);
+        instruction_addr    : out std_logic_vector(31 downto 0)
     );
 end entity State_Fetch;
 
@@ -79,6 +80,8 @@ begin
         address     => address_pc_progmem,
         instruction => instruction
     );
+
+    instruction_addr    <= address_pc_progmem;
     
     
 end architecture rtl;

@@ -20,6 +20,8 @@ entity State_Decode is
         mux_2_1_alu_sel     : out std_logic;
         wr_back_en          : out std_logic;
         mux_2_1_wb_sel      : out std_logic;
+        data_mem_write_en   : out std_logic;
+        data_mem_format     : out std_logic_vector(2 downto 0);
         jump_branch_unit_op : out std_logic_vector(3 downto 0);
         jump_branch_unit_en : out std_logic
     );
@@ -54,6 +56,8 @@ architecture rtl of State_Decode is
         mux_2_1_alu_sel     : out std_logic;
         wr_back_en          : out std_logic;
         mux_2_1_wb_sel      : out std_logic;
+        data_mem_write_en   : out std_logic;
+        data_mem_format     : out std_logic_vector(2 downto 0);
         jump_branch_unit_op : out std_logic_vector(3 downto 0);
         jump_branch_unit_en : out std_logic
     );
@@ -97,6 +101,8 @@ begin
         mux_2_1_alu_sel     => mux_2_1_alu_sel,             -- out
         wr_back_en          => wr_back_en,                  -- out
         mux_2_1_wb_sel      => mux_2_1_wb_sel,              -- out
+        data_mem_write_en   => data_mem_write_en,           -- out
+        data_mem_format     => data_mem_format,             -- out
         jump_branch_unit_op => jump_branch_unit_op,         -- out
         jump_branch_unit_en => jump_branch_unit_en          -- out
     );

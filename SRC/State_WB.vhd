@@ -7,7 +7,7 @@ entity State_WB is
         clk_state           : in std_logic;
         rst_state           : in std_logic;
         en_state            : in std_logic;
-        data_mem_load_en    : in std_logic;
+        data_mem_write_en   : in std_logic;
         data_mem_format     : in std_logic_vector(2 downto 0);
         data_mem_data_in    : in std_logic_vector(31 downto 0);
         data_mem_address    : in std_logic_vector(31 downto 0);
@@ -51,7 +51,7 @@ begin
     port map(
         clk         => clk_state,               -- in
         rst         => rst_state,               -- in
-        load_en     => data_mem_load_en,        -- in
+        load_en     => data_mem_write_en,       -- in
         format      => data_mem_format,         -- in
         data_in     => data_mem_data_in,        -- in
         address     => data_mem_address,        -- in

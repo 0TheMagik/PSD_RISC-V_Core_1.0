@@ -108,6 +108,8 @@ begin
 
             else
                 pc_next <= std_logic_vector(unsigned(pc_current) + 4);
+                jump_branch_flag <= '0';
+
             end if;
         end if;
     end process output;

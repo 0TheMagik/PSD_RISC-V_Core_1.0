@@ -4,26 +4,31 @@ use IEEE.numeric_std.all;
 
 entity State_Execute is
     port (
-        clk_state           : in std_logic;
-        rst_state           : in std_logic;
-        en                  : in std_logic;
-        reg_file_in_0       : in std_logic_vector(31 downto 0);
-        reg_file_in_1       : in std_logic_vector(31 downto 0);
-        reg_addr_dst_in     : in std_logic_vector(4 downto 0);
-        immediate           : in std_logic_vector(31 downto 0);
-        alu_op              : in std_logic_vector(3 downto 0);
-        mux_2_1_alu_sel     : in std_logic;
-        wr_back_en_in       : in std_logic;
-        mux_2_1_wb_sel_in   : in std_logic;
-        pc_current          : in std_logic_vector(31 downto 0);
-        jump_branch_unit_op : in std_logic_vector(3 downto 0);
-        jump_branch_unit_en : in std_logic;
-        alu_out             : out std_logic_vector(31 downto 0);
-        pc_next             : out std_logic_vector(31 downto 0);
-        jump_branch_flag    : out std_logic;
-        reg_addr_dst_out    : out std_logic_vector(4 downto 0);
-        wr_back_en_out      : out std_logic;
-        mux_2_1_wb_sel_out  : out std_logic
+        clk_state               : in std_logic;
+        rst_state               : in std_logic;
+        en                      : in std_logic;
+        reg_file_in_0           : in std_logic_vector(31 downto 0);
+        reg_file_in_1           : in std_logic_vector(31 downto 0);
+        reg_addr_dst_in         : in std_logic_vector(4 downto 0);
+        immediate               : in std_logic_vector(31 downto 0);
+        alu_op                  : in std_logic_vector(3 downto 0);
+        mux_2_1_alu_sel         : in std_logic;
+        wr_back_en_in           : in std_logic;
+        mux_2_1_wb_sel_in       : in std_logic;
+        data_mem_write_en_in    : in std_logic;
+        data_mem_format_in      : in std_logic_vector(2 downto 0);
+        pc_current              : in std_logic_vector(31 downto 0);
+        jump_branch_unit_op     : in std_logic_vector(3 downto 0);
+        jump_branch_unit_en     : in std_logic;
+        alu_out                 : out std_logic_vector(31 downto 0);
+        pc_next                 : out std_logic_vector(31 downto 0);
+        jump_branch_flag        : out std_logic;
+        reg_addr_dst_out        : out std_logic_vector(4 downto 0);
+        wr_back_en_out          : out std_logic;
+        mux_2_1_wb_sel_out      : out std_logic;
+        data_mem_write_en_out   : out std_logic;
+        data_mem_format_out     : out std_logic_vector(2 downto 0);
+        data_mem_data_in        : out std_logic_vector(31 downto 0)
     );
 end entity State_Execute;
 
@@ -100,7 +105,10 @@ begin
         jump_branch_flag => jump_branch_flag
     );
     
-    reg_addr_dst_out    <= reg_addr_dst_in;
-    wr_back_en_out      <= wr_back_en_in;
-    mux_2_1_wb_sel_out  <= mux_2_1_wb_sel_in;
+    reg_addr_dst_out        <= reg_addr_dst_in;
+    wr_back_en_out          <= wr_back_en_in;
+    mux_2_1_wb_sel_out      <= mux_2_1_wb_sel_in;
+    data_mem_write_en_out   <= data_mem_write_en_in;
+    data_mem_format_out     <= data_mem_format_in;
+    data_mem_data_in        <= reg_file_in_1;
 end architecture rtl;

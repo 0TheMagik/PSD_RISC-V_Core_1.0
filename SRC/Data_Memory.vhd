@@ -27,7 +27,7 @@ architecture rtl of Data_Memory is
     signal data_read : std_logic_vector(31 downto 0);
 begin
     
-    access_mem: process(clk, rst)
+    access_mem: process(clk, rst, load_en)
         variable addr_mem : integer;
         variable halfword : std_logic_vector(15 downto 0);
     begin
@@ -37,6 +37,7 @@ begin
             mem <= (others => (others => '0'));
         elsif rising_edge(clk) then
             if load_en = '1' then
+                data_read <= (others => '0');
                 case format is
                     when "000" => -- SB
                         mem(addr_mem) <=  data_in(7 downto 0);
