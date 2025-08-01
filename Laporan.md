@@ -3,7 +3,8 @@
 Izzan Nawa Syarif
 ```
 Link Github : https://github.com/0TheMagik/PSD_RISC-V_Core_1.0   
-konversi RISC-V to hexcode : https://luplab.gitlab.io/rvcodecjs/#q=bne+x0,+x2,+-56&abi=false&isa=AUTO 
+konversi RISC-V to hexcode : https://luplab.gitlab.io/rvcodecjs/#q=bne+x0,+x2,+-56&abi=false&isa=AUTO   
+RISC-V ISA Manual : https://drive.google.com/file/d/1uviu1nH-tScFfgrovvFCrj7Omv8tFtkp/view 
 ## Abstrak
 
 RISC-V adalah sebuah Instruction Set open source yang dirancang untuk memberikan standar yang terbuka dan mudah di implementasikan dan modular. Meningkatnya penggunaan processor dengan instruction set RISC-V menjadikan instruction set ini banyak di pelajari dengan melakukan implementasi 
