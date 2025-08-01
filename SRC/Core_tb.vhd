@@ -52,6 +52,92 @@ begin
         load_addr <= (others => '0');
         wait for clk_period * 2;
 
+        -- -- Test Case 1
+        -- wait until rising_edge(clk);
+        -- rst <= '0';
+        -- en_load <= '1';
+        -- load_data <= x"00000013"; -- addi x0, x0, 0
+        -- load_addr <= x"00000000"; -- PC = 0
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00000013"; -- addi x0, x0, 0
+        -- load_addr <= x"00000004"; -- PC = 4
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00100093"; -- addi x1, x0, 1
+        -- load_addr <= x"00000008"; -- PC = 8
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00200113"; -- addi x2, x0, 2
+        -- load_addr <= x"0000000c"; -- PC = 12
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00300193"; -- addi x3, x0, 3
+        -- load_addr <= x"00000010"; -- PC = 16
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00400213"; -- addi x4, x0, 4
+        -- load_addr <= x"00000014"; -- PC = 20
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00500293"; -- addi x5, x0, 5
+        -- load_addr <= x"00000018"; -- PC = 24
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00600313"; -- addi x6, x0, 6
+        -- load_addr <= x"0000001c"; -- PC = 28
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00700393"; -- addi x7, x0, 7
+        -- load_addr <= x"00000020"; -- PC = 32
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00800413"; -- addi x8, x0, 8
+        -- load_addr <= x"00000024"; -- PC = 36
+
+        -- -- Test Case 2
+        -- wait until rising_edge(clk);
+        -- rst <= '0';
+        -- en_load <= '1';
+        -- load_data <= x"00000013"; -- addi x0, x0, 0
+        -- load_addr <= x"00000000"; -- PC = 0
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00000013"; -- addi x0, x0, 0
+        -- load_addr <= x"00000004"; -- PC = 4
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00100093"; -- addi x1, x0, 1
+        -- load_addr <= x"00000008"; -- PC = 8
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00200113"; -- addi x2, x0, 2
+        -- load_addr <= x"0000000c"; -- PC = 12
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00300193"; -- addi x3, x0, 3
+        -- load_addr <= x"00000010"; -- PC = 16
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00400213"; -- addi x4, x0, 4
+        -- load_addr <= x"00000014"; -- PC = 20
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"0030af13"; -- slti x30, x1, 3
+        -- load_addr <= x"00000018"; -- PC = 24
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00102023"; -- sw x1, 0(x0)
+        -- load_addr <= x"0000001c"; -- PC = 28
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00110eb3"; -- add x29, x2, x1
+        -- load_addr <= x"00000020"; -- PC = 32
+
+        -- wait until rising_edge(clk);
+        -- load_data <= x"00800413"; -- addi x8, x0, 8
+        -- load_addr <= x"00000024"; -- PC = 36
+
         wait until rising_edge(clk);
         rst <= '0';
         en_load <= '1';
@@ -63,36 +149,36 @@ begin
         load_addr <= x"00000004"; -- PC = 4
 
         wait until rising_edge(clk);
-        load_data <= x"00a00113"; -- addi x2, x0, 10
+        load_data <= x"00100093"; -- addi x1, x0, 1
         load_addr <= x"00000008"; -- PC = 8
 
         wait until rising_edge(clk);
-        load_data <= x"00a00193"; -- addi x3, x0, 10
+        load_data <= x"00200113"; -- addi x2, x0, 2
         load_addr <= x"0000000c"; -- PC = 12
 
         wait until rising_edge(clk);
-        load_data <= x"00a00213"; -- addi x4, x0, 10
+        load_data <= x"00300193"; -- addi x3, x0, 3
         load_addr <= x"00000010"; -- PC = 16
 
         wait until rising_edge(clk);
-        load_data <= x"00202023"; -- sw x2, 0(0)
+        load_data <= x"00110eb3"; -- add x29, x2, x1
         load_addr <= x"00000014"; -- PC = 20
 
         wait until rising_edge(clk);
-        load_data <= x"003100b3"; -- add x1, x2, x3
+        load_data <= x"0030af13"; -- slti x30, x1, 3
         load_addr <= x"00000018"; -- PC = 24
 
         wait until rising_edge(clk);
-        load_data <= x"00000013"; -- addi x0, x0, 0
+        load_data <= x"00110eb3"; -- add x29, x2, x1
         load_addr <= x"0000001c"; -- PC = 28
 
         wait until rising_edge(clk);
-        load_data <= x"0051c293"; -- xori x5, x3, 5
-        load_addr <= x"00000020"; -- PC = 3
+        load_data <= x"00110eb3"; -- add x29, x2, x1
+        load_addr <= x"00000020"; -- PC = 32
 
         wait until rising_edge(clk);
-        load_data <= x"00202023"; -- sw x2, 0(0)
-        load_addr <= x"00000024"; -- PC = 24
+        load_data <= x"fc2014e3"; -- bne x0, x2, -56
+        load_addr <= x"00000024"; -- PC = 36
 
         wait until rising_edge(clk);
         en_load <= '0'; -- stop loading instructions
