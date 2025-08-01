@@ -91,18 +91,16 @@ begin
 
     Jump_Branch_Unit_inst : Jump_Branch_Unit
     port map(
-        en          => en,
-        clk         => clk_state,
-        rst         => rst_state,
-        
-        pc_current  => pc_current,
-        input_0     => reg_file_in_0,
-        input_1     => reg_file_in_1,
-        immediate   => immediate,
-        jump_branch_op   => jump_branch_unit_op, 
-        
-        pc_next          => pc_next,
-        jump_branch_flag => jump_branch_flag
+        en                  => jump_branch_unit_en,
+        clk                 => clk_state,
+        rst                 => rst_state,
+        pc_current          => pc_current,
+        input_0             => reg_file_in_0,
+        input_1             => reg_file_in_1,
+        immediate           => immediate,
+        jump_branch_op      => jump_branch_unit_op, 
+        pc_next             => pc_next,
+        jump_branch_flag    => jump_branch_flag
     );
     
     reg_addr_dst_out        <= reg_addr_dst_in;

@@ -45,245 +45,242 @@ begin
 
     decoding : process(clk, instruction)
     begin
-        if rst =  '1' then
-            opMAP <= INVALID;
-            decode_op <= INVALID;
-        elsif rising_edge(clk) then
-            
-            --OPCODE MAP [4:2]
-            case (instruction(4 downto 2)) is
-                
-                when "000" => 
+        if rising_edge(clk) then
+            if instruction(6 downto 0) = "0000000" or rst = '1' then
+                opMAP <= INVALID;
+                decode_op <= INVALID;
+            else
+                --OPCODE MAP [4:2]
+                case (instruction(4 downto 2)) is
+                    
+                    when "000" => 
 
-                    --OPCODE MAP [6:5]
-                    case (instruction(6 downto 5)) is
-                        when "00" => 
-                            opMAP <= LOAD;
-                            case (instruction (14 downto 12))  is
-                                
-                                when "000" =>
-                                    decode_op <= LB;
-                                
-                                when "001" => 
-                                    decode_op <= LH;
-                                
-                                when "010" => 
-                                    decode_op <= LW;
-                                
-                                when "100" => 
-                                    decode_op <= LBU;
-                                
-                                when "101" => 
-                                    decode_op <= LHU;
-                                                                
-                                when others =>
-                                    decode_op <= INVALID;
-
-                            end case;
-
-
-                        when "01" => 
-                            opMAP <= STORE;
-                            case (instruction (14 downto 12)) is
-                                
-                                when "000" =>
-                                    decode_op <= SB;
+                        --OPCODE MAP [6:5]
+                        case (instruction(6 downto 5)) is
+                            when "00" => 
+                                opMAP <= LOAD;
+                                case (instruction (14 downto 12))  is
                                     
-                                when "001" => 
-                                    decode_op <= SH;
-                                
-                                when "010" => 
-                                    decode_op <= SW;
-                            
-                                when others =>
-                                    decode_op <=  INVALID;
-                            
-                            end case;
-                        when "11" => 
-                            opMAP <= BRANCH;
-                            case (instruction (14 downto 12)) is
-                                when "000" =>
-                                    decode_op <= BEQ;
-                                
-                                when "001" => 
-                                    decode_op <= BNE;
-
-                                when "100" => 
-                                    decode_op <= BLT;
-
-                                when "101" => 
-                                    decode_op <=  BGE;
-
-                                when "110" => 
-                                    decode_op <= BLTU;
-
-                                when "111" => 
-                                    decode_op <= BGEU;
+                                    when "000" =>
+                                        decode_op <= LB;
                                     
-                                when others =>
-                                    decode_op <= INVALID;
-                            
-                            end case;
+                                    when "001" => 
+                                        decode_op <= LH;
+                                    
+                                    when "010" => 
+                                        decode_op <= LW;
+                                    
+                                    when "100" => 
+                                        decode_op <= LBU;
+                                    
+                                    when "101" => 
+                                        decode_op <= LHU;
+                                                                    
+                                    when others =>
+                                        decode_op <= INVALID;
 
-                        when others => 
-                            opMAP <= INVALID;
+                                end case;
 
-                        end case; --OPCODE MAP [6:5] END
-                
-                when "001" => 
-                    --OPCODE MAP [6:5]
-                    case (instruction(6 downto 5)) is
-                        when "11" => 
-                            opMAP <= JALR;
-                            decode_op <= JALR;
 
-                        when others =>
-                            opMAP <= INVALID;
-    
+                            when "01" => 
+                                opMAP <= STORE;
+                                case (instruction (14 downto 12)) is
+                                    
+                                    when "000" =>
+                                        decode_op <= SB;
+                                        
+                                    when "001" => 
+                                        decode_op <= SH;
+                                    
+                                    when "010" => 
+                                        decode_op <= SW;
+                                
+                                    when others =>
+                                        decode_op <=  INVALID;
+                                
+                                end case;
+                            when "11" => 
+                                opMAP <= BRANCH;
+                                case (instruction (14 downto 12)) is
+                                    when "000" =>
+                                        decode_op <= BEQ;
+                                    
+                                    when "001" => 
+                                        decode_op <= BNE;
+
+                                    when "100" => 
+                                        decode_op <= BLT;
+
+                                    when "101" => 
+                                        decode_op <=  BGE;
+
+                                    when "110" => 
+                                        decode_op <= BLTU;
+
+                                    when "111" => 
+                                        decode_op <= BGEU;
+                                        
+                                    when others =>
+                                        decode_op <= INVALID;
+                                
+                                end case;
+
+                            when others => 
+                                opMAP <= INVALID;
+
+                            end case; --OPCODE MAP [6:5] END
+                    
+                    when "001" => 
+                        --OPCODE MAP [6:5]
+                        case (instruction(6 downto 5)) is
+                            when "11" => 
+                                opMAP <= JALR;
+                                decode_op <= JALR;
+
+                            when others =>
+                                opMAP <= INVALID;
+        
+                            end case;--OPCODE MAP [6:5] END
+
+                    when "010" => 
+                        --OPCODE MAP [6:5]
+                        case (instruction (6 downto 5)) is
+                            when others =>
+                                opMAP <= INVALID;
+                    
+                        end case;--OPCODE MAP [6:5] END
+                    
+                    
+                    when "011" => 
+                        --OPCODE MAP [6:5]
+                        case (instruction(6 downto 5)) is
+                            when "11" =>
+                                opMAP <= JAL;
+                                decode_op <= JAL;
+                        
+                            when others =>
+                                opMAP <= INVALID;
+                        
                         end case;--OPCODE MAP [6:5] END
 
-                when "010" => 
-                    --OPCODE MAP [6:5]
-                    case (instruction (6 downto 5)) is
-                        when others =>
-                            opMAP <= INVALID;
-                
-                    end case;--OPCODE MAP [6:5] END
-                
-                
-                when "011" => 
-                    --OPCODE MAP [6:5]
-                    case (instruction(6 downto 5)) is
-                        when "11" =>
-                            opMAP <= JAL;
-                            decode_op <= JAL;
-                    
-                        when others =>
-                            opMAP <= INVALID;
-                    
-                    end case;--OPCODE MAP [6:5] END
-
-                when "100" => 
-                    --OPCODE MAP [6:5]
-                    case (instruction (6 downto 5)) is
-                        when "00" =>
-                            opMAP <= OP_IMM;
-                            case (instruction (14 downto 12)) is
-                                when "000" =>
-                                    decode_op <= ADDI;
-                                
-                                when "010" => 
-                                    decode_op <= SLTI;
-                                
-                                when "011" => 
-                                    decode_op <= SLTIU;
-
-                                when "100" => 
-                                    decode_op <= XORI;
-
-                                when "110" => 
-                                    decode_op <= ORI;
+                    when "100" => 
+                        --OPCODE MAP [6:5]
+                        case (instruction (6 downto 5)) is
+                            when "00" =>
+                                opMAP <= OP_IMM;
+                                case (instruction (14 downto 12)) is
+                                    when "000" =>
+                                        decode_op <= ADDI;
                                     
-                                when "111" => 
-                                    decode_op <= ANDI;
-
-                                when "001" => 
-                                    decode_op <= SLLI;
-
-                                when "101" => 
-                                    case (instruction (31 downto 25)) is
-                                        when "0000000" =>
-                                            decode_op <= SRLI;
-
-                                        when "0100000" => 
-                                            decode_op <= SRAI;
+                                    when "010" => 
+                                        decode_op <= SLTI;
                                     
-                                        when others =>
-                                            decode_op <= INVALID;        
-                                    end case;
-                                when others =>
-                                    decode_op <= INVALID;
-                            end case;
+                                    when "011" => 
+                                        decode_op <= SLTIU;
+
+                                    when "100" => 
+                                        decode_op <= XORI;
+
+                                    when "110" => 
+                                        decode_op <= ORI;
+                                        
+                                    when "111" => 
+                                        decode_op <= ANDI;
+
+                                    when "001" => 
+                                        decode_op <= SLLI;
+
+                                    when "101" => 
+                                        case (instruction (31 downto 25)) is
+                                            when "0000000" =>
+                                                decode_op <= SRLI;
+
+                                            when "0100000" => 
+                                                decode_op <= SRAI;
+                                        
+                                            when others =>
+                                                decode_op <= INVALID;        
+                                        end case;
+                                    when others =>
+                                        decode_op <= INVALID;
+                                end case;
+                            
+                            when "01" => 
+                                opMAP <= OP;
+                                case (instruction (14 downto 12)) is
+                                    when "000" =>
+                                        case (instruction (31 downto 25)) is
+                                            when "0000000" =>
+                                                decode_op <= opcode_ADD;
+
+                                            when "0100000" => 
+                                                decode_op <= opcode_SUB;
+                                        
+                                            when others =>
+                                                decode_op <= INVALID;
+                                        end case;
+                                    
+                                    when "001" => 
+                                        decode_op <= opcode_SLL;
+                                    
+                                    when "010" => 
+                                        decode_op <= opcode_SLT;
+
+                                    when "011" => 
+                                        decode_op <= opcode_SLTU;
+
+                                    when "100" => 
+                                        decode_op <= opcode_XOR;
+
+                                    when "101" => 
+                                        case (instruction(31 downto 25)) is
+                                            when "0000000" =>
+                                                decode_op <= opcode_SRL;
+
+                                            when "0100000" => 
+                                                decode_op <= opcode_SRA;
+                                                                            
+                                            when others =>
+                                                decode_op <= INVALID;                                   
+                                        end case;
+                                    
+                                    when "110" => 
+                                        decode_op <= opcode_OR;
+
+                                    when "111" => 
+                                        decode_op <= opcode_AND;
+                                    
+                                    when others =>
+                                        decode_op <= INVALID;
+                                end case;
                         
-                        when "01" => 
-                            opMAP <= OP;
-                            case (instruction (14 downto 12)) is
-                                when "000" =>
-                                    case (instruction (31 downto 25)) is
-                                        when "0000000" =>
-                                            decode_op <= opcode_ADD;
+                            when others =>
+                                opMAP <= INVALID;
+                        
+                        end case;--OPCODE MAP [6:5] END
 
-                                        when "0100000" => 
-                                            decode_op <= opcode_SUB;
-                                    
-                                        when others =>
-                                            decode_op <= INVALID;
-                                    end case;
+                    when "101" => 
+                        --OPCODE MAP [6:5]
+                        case (instruction (6 downto 5)) is
+                            when "00" =>
+                                opMAP <= AUIPC;
+                                decode_op <= AUIPC;
                                 
-                                when "001" => 
-                                    decode_op <= opcode_SLL;
+                            when "01" => 
+                                opMAP <= LUI;
+                                decode_op <= LUI;
                                 
-                                when "010" => 
-                                    decode_op <= opcode_SLT;
-
-                                when "011" => 
-                                    decode_op <= opcode_SLTU;
-
-                                when "100" => 
-                                    decode_op <= opcode_XOR;
-
-                                when "101" => 
-                                    case (instruction(31 downto 25)) is
-                                        when "0000000" =>
-                                            decode_op <= opcode_SRL;
-
-                                        when "0100000" => 
-                                            decode_op <= opcode_SRA;
-                                                                         
-                                        when others =>
-                                            decode_op <= INVALID;                                   
-                                    end case;
-                                
-                                when "110" => 
-                                    decode_op <= opcode_OR;
-
-                                when "111" => 
-                                    decode_op <= opcode_AND;
-                                
-                                when others =>
-                                    decode_op <= INVALID;
-                            end case;
-                    
-                        when others =>
-                            opMAP <= INVALID;
-                    
-                    end case;--OPCODE MAP [6:5] END
-
-                when "101" => 
-                    --OPCODE MAP [6:5]
-                    case (instruction (6 downto 5)) is
-                        when "00" =>
-                            opMAP <= AUIPC;
-                            decode_op <= AUIPC;
-                            
-                        when "01" => 
-                            opMAP <= LUI;
-                            decode_op <= LUI;
-                            
-                        when others =>
-                            opMAP <= INVALID;
-                    
-                    end case;--OPCODE MAP [6:5] END
-            
-                when others =>
-                    opMAP <= INVALID;
-            
-                end case; --OPCODE MAP [4:2] End
-
-        end if;
-
-
-        
+                            when others =>
+                                opMAP <= INVALID;
+                        
+                        end case;--OPCODE MAP [6:5] END
+                
+                    when others =>
+                        opMAP <= INVALID;
+                
+                end case; --OPCODE MAP [4:2] End                
+            end if;
+        end if;        
     end process;
 
     decoding_out: process(clk, rst, opMAP)
@@ -388,24 +385,16 @@ begin
                     data_mem_write_en   <= '0';
                     data_mem_format     <= (others => '0');
 
-                    case decode_op is
-                        when ADDI | SLTI | SLTIU | XORI | ORI | ANDI=>
-                            immediate   <=  std_logic_vector(resize(signed(instruction(31 downto 20)), 32));
-
-                        -- when SLTIU => 
-                        --     immediate <= "00000000000000000000" & instruction(31 downto 20);
-                        
-                        -- when SLTIU | XORI | ORI | ANDI => 
-                        --     immediate <= "00000000000000000000" & instruction(31 downto 20);
-
-                        
-                        -- when SLLI => 
+                    -- Fix: Use instruction bits directly instead of decode_op
+                    case instruction(14 downto 12) is
+                        when "000" | "010" | "011" | "100" | "110" | "111" => -- ADDI, SLTI, SLTIU, XORI, ORI, ANDI
+                            immediate <= std_logic_vector(resize(signed(instruction(31 downto 20)), 32));
                             
-                        when SLLI | SRLI | SRAI => 
-                            immediate   <= "000000000000000000000000000" & instruction(24 downto 20);
+                        when "001" | "101" => -- SLLI, SRLI, SRAI
+                            immediate <= "000000000000000000000000000" & instruction(24 downto 20);
                             
                         when others =>
-                            immediate   <= (others => '0');
+                            immediate <= (others => '0');
                     end case;
 
                 when OP => 

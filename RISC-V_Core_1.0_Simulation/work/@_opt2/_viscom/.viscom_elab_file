@@ -1,1 +1,1 @@
-C:/intelFPGA_lite/24.1std/questa_fse/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 15679776 work.core -quiet -auto_acc_if_foreign -work work -allow_unnamed -o _opt2 -id 1-d8bbc1359ac9-688a4747-176-4c7c
+C:/intelFPGA_lite/24.1std/questa_fse/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 16859424 work.core_tb(sim) -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt2 -id 5-d8bbc1359ac9-688c98e0-150-46c4 +__betafsm

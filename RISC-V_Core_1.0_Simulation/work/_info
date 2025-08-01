@@ -1,12 +1,8 @@
 m255
 K4
 z2
-Z0 !s12c _opt1
+Z0 !s12c _opt2
 Z1 !s99 nomlopt
-R0
-R1
-R0
-R1
 R0
 R1
 R0
@@ -43,81 +39,9 @@ R0
 R1
 Z2 !s12c _opt
 R1
-R2
-R1
-Z3 !s12c _opt2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R3
-R1
 R0
 R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R2
-R1
-R2
+Z3 !s12c _opt1
 R1
 R3
 R1
@@ -129,25 +53,65 @@ R3
 R1
 R3
 R1
-R0
+R3
 R1
-R0
+R3
 R1
-R2
+R3
 R1
-R2
+R3
 R1
-R0
+R3
 R1
-R0
+R3
 R1
-R0
+R3
 R1
-R2
+R3
 R1
-R0
+R3
 R1
-R0
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
 R1
 R3
 R1
@@ -157,25 +121,31 @@ R3
 R1
 R2
 R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
+R2
 R1
 R0
 R1
 R2
 R1
-R3
+R2
 R1
-R3
+R2
 R1
-R0
+R2
 R1
-R3
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
 R1
 R2
 R1
@@ -191,6 +161,78 @@ R0
 R1
 R3
 R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R2
+R1
+R2
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R3
+R1
+R3
+R1
+R2
+R1
+R2
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R2
+R1
+R3
+R1
+R3
+R1
+R0
+R1
+R0
+R1
+R0
+R1
 R2
 R1
 R3
@@ -209,7 +251,25 @@ R0
 R1
 R0
 R1
+R3
+R1
 R0
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R3
+R1
+R0
+R1
+R2
 R1
 R0
 R1
@@ -221,25 +281,43 @@ R0
 R1
 R0
 R1
+R2
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
 R0
+R1
+R2
+R1
+R3
 R1
 R3
 R1
 R2
 R1
-R0
+R3
 R1
-R0
+R3
 R1
-R2
+R3
 R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
+R3
 R1
 R2
 R1
@@ -252,55 +330,55 @@ R1
 cModel Technology
 Z4 dC:/Users/TEST/AppData/Local/quartus
 T_opt
-!s110 1753894141
-VZfkGB6zS5BJU6nPObQ5RB1
-Z5 04 4 3 work core rtl 1
-=1-d8bbc1359ac9-688a4cfc-2c6-5350
+!s110 1754008443
+V7mbbWW=STGkOU8G7H:ibo3
+Z5 04 7 3 work core_tb sim 1
+=1-d8bbc1359ac9-688c0b7a-1d3-2d08
 R1
 Z6 !s12f OEM100
 Z7 !s12b OEM100
-Z8 !s124 OEM10U14 
+Z8 !s124 OEM10U15 
 Z9 !s135 nogc
-o-quiet -auto_acc_if_foreign -work work +acc
+o-quiet -auto_acc_if_foreign -work work
 Z10 tCvgOpt 0
 n@_opt
 Z11 OL;O;2024.3;79
 R4
 T_opt1
-!s110 1753961047
-VG3l5DnE2631@BaFGc`dI41
-R5
-=34-d8bbc1359ac9-688b5256-248-4838
+!s110 1753984405
+VcaNz>]QeRCMXinDU_oe[T2
+04 4 3 work core rtl 1
+=12-d8bbc1359ac9-688bad95-18b-28f4
 R1
 R6
 R7
-R8
+!s124 OEM10U14 
 R9
 o-quiet -auto_acc_if_foreign -work work +acc +acc
 R10
 n@_opt1
 R11
+R4
 T_opt2
-!s110 1753892680
-V6:Uo`4CMjD=LNjL8z5Hi71
+!s110 1754044640
+VQX1`Y80CI]T?_=jk7RbAI2
 R5
-=1-d8bbc1359ac9-688a4747-176-4c7c
+=5-d8bbc1359ac9-688c98e0-150-46c4
 R1
 R6
 R7
 R8
 R9
-o-quiet -auto_acc_if_foreign -work work
+o-quiet -auto_acc_if_foreign -work work +acc
 R10
 n@_opt2
 R11
-R4
 Ealu
 Z12 w1753765856
 Z13 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z14 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z15 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 764
+!i122 1257
 Z16 dD:/VsCode_Files/Clone/RISC-V_Core_1.0/RISC-V_Core_1.0_Simulation
 Z17 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/ALU.vhd
 Z18 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/ALU.vhd
@@ -310,9 +388,9 @@ V2c^d7_[W>3KU>::Cb;;nA0
 !s100 iB6I9YEie3@[?I?R@SUWS2
 Z19 OL;C;2024.3;79
 32
-Z20 !s110 1753961039
+Z20 !s110 1754044634
 !i10b 1
-Z21 !s108 1753961038.000000
+Z21 !s108 1754044634.000000
 Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/ALU.vhd|
 Z23 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/ALU.vhd|
 !i113 0
@@ -323,7 +401,7 @@ R13
 R14
 R15
 DEx4 work 3 alu 0 22 2c^d7_[W>3KU>::Cb;;nA0
-!i122 764
+!i122 1257
 l19
 L15 57
 V]^`ghIXoFE<6?l`9T@h0b1
@@ -339,11 +417,11 @@ R23
 R24
 R25
 Ecore
-Z26 w1753955782
+Z26 w1754021480
 R13
 R14
 R15
-!i122 775
+!i122 1269
 R16
 Z27 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Core.vhd
 Z28 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Core.vhd
@@ -353,9 +431,9 @@ VGblmk]5^0Om=n@:U:^;=C2
 !s100 Q^R3zX^^;CK>33Zefk3eC1
 R19
 32
-Z29 !s110 1753961041
+Z29 !s110 1754044636
 !i10b 1
-Z30 !s108 1753961041.000000
+Z30 !s108 1754044636.000000
 Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Core.vhd|
 Z32 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Core.vhd|
 !i113 0
@@ -365,12 +443,12 @@ Artl
 R13
 R14
 R15
-DEx4 work 4 core 0 22 Gblmk]5^0Om=n@:U:^;=C2
-!i122 775
-l166
-L20 312
-VhIkaZIIz2E:IfQeaQHTC42
-!s100 V@O^IoKSOzT61@H0N81a03
+Z33 DEx4 work 4 core 0 22 Gblmk]5^0Om=n@:U:^;=C2
+!i122 1269
+l213
+L20 445
+V>J=>Ij[jlVLCQO_z5OoKz0
+!s100 ]k^:a@E7QI@iYWF6S3kTY0
 R19
 32
 R29
@@ -381,26 +459,115 @@ R32
 !i113 0
 R24
 R25
-Edata_memory
-Z33 w1753958607
+Ecore_pipelined_tb
+Z34 w1753967487
 R13
 R14
 R15
-!i122 771
+!i122 837
 R16
-Z34 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Data_Memory.vhd
-Z35 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Data_Memory.vhd
+Z35 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Core_Pipelined_tb.vhd
+Z36 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Core_Pipelined_tb.vhd
+l0
+L5 1
+VnNgMC2_zk>WYH:A5FF6]O2
+!s100 hEDzo@PFJmk=Zi:NW9JF_1
+R19
+32
+Z37 !s110 1753967562
+!i10b 1
+Z38 !s108 1753967562.000000
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Core_Pipelined_tb.vhd|
+Z40 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Core_Pipelined_tb.vhd|
+!i113 0
+R24
+R25
+Asim
+R13
+R14
+R15
+DEx4 work 17 core_pipelined_tb 0 22 nNgMC2_zk>WYH:A5FF6]O2
+!i122 837
+l36
+L8 125
+Vi?[;i53k2UPYC5mHbMhAm2
+!s100 d6c?F6cIgLVoNN:@72XFW2
+R19
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 0
+R24
+R25
+Ecore_tb
+Z41 w1754044296
+Z42 DPx3 std 3 env 0 22 g[fj8WJKOa<0Y`zWY3UD70
+R13
+R14
+R15
+!i122 1270
+R16
+Z43 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Core_tb.vhd
+Z44 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Core_tb.vhd
+l0
+L8 1
+VkD]SoD@DDnaA8X>d@5<[P3
+!s100 _3RG5iZnn0ZVPRkMe^HTV3
+R19
+33
+Z45 !s110 1754044637
+!i10b 1
+Z46 !s108 1754044637.000000
+Z47 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Core_tb.vhd|
+Z48 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Core_tb.vhd|
+!i113 0
+Z49 o-work work -2008 -explicit
+R25
+Asim
+R33
+R42
+R13
+R14
+R15
+DEx4 work 7 core_tb 0 22 kD]SoD@DDnaA8X>d@5<[P3
+!i122 1270
+l24
+L11 101
+V]J:D^22B;:eG[6i89dHaT2
+!s100 k:UZBgZn1llMn2XXikY:^2
+R19
+33
+R45
+!i10b 1
+R46
+R47
+R48
+!i113 0
+R49
+R25
+Edata_memory
+Z50 w1753958607
+R13
+R14
+R15
+!i122 1264
+R16
+Z51 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Data_Memory.vhd
+Z52 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Data_Memory.vhd
 l0
 L5 1
 VWf5e@T`iJDfZCYKEg_8:c0
 !s100 QH_gg1LOV0jBFjTg2Zb622
 R19
 32
-Z36 !s110 1753961040
+Z53 !s110 1754044635
 !i10b 1
-Z37 !s108 1753961040.000000
-Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Data_Memory.vhd|
-Z39 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Data_Memory.vhd|
+Z54 !s108 1754044635.000000
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Data_Memory.vhd|
+Z56 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Data_Memory.vhd|
 !i113 0
 R24
 R25
@@ -409,41 +576,41 @@ R13
 R14
 R15
 DEx4 work 11 data_memory 0 22 Wf5e@T`iJDfZCYKEg_8:c0
-!i122 771
+!i122 1264
 l28
 L17 69
 VLCjOTniz4BC:X42l8<eOC3
 !s100 WYnY:?@DL4j77KG7eI]E?1
 R19
 32
-R36
+R53
 !i10b 1
-R37
-R38
-R39
+R54
+R55
+R56
 !i113 0
 R24
 R25
 Edecoder
-Z40 w1753958314
+Z57 w1754012125
 R13
 R14
 R15
-!i122 762
+!i122 1255
 R16
-Z41 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder.vhd
-Z42 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder.vhd
+Z58 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder.vhd
+Z59 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder.vhd
 l0
 L8 1
 V@lB@1:bO85F^W3ICe^WMV0
 !s100 YzU]_edW9;iI?A1Q@7ej71
 R19
 32
-Z43 !s110 1753961038
+R20
 !i10b 1
 R21
-Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder.vhd|
-Z45 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder.vhd|
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder.vhd|
+Z61 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder.vhd|
 !i113 0
 R24
 R25
@@ -452,32 +619,32 @@ R13
 R14
 R15
 DEx4 work 7 decoder 0 22 @lB@1:bO85F^W3ICe^WMV0
-!i122 762
+!i122 1255
 l43
-L30 443
-V7^z6kM06gA5<c7W0M:h8;2
-!s100 ]:lzZIDNU47ZVO78WFHZ;1
+L30 432
+VL?gnPgLmOQ4:8VH>ZNK651
+!s100 k50aF`jiPzmEkUFBNljVY0
 R19
 32
-R43
+R20
 !i10b 1
 R21
-R44
-R45
+R60
+R61
 !i113 0
 R24
 R25
 Edecoder_tb
-Z46 w1753713222
-Z47 DPx3 std 3 env 0 22 g[fj8WJKOa<0Y`zWY3UD70
-Z48 DPx4 ieee 16 std_logic_textio 0 22 8]8<fKiYoHe;_IDO3kmNH2
+Z62 w1753713222
+R42
+Z63 DPx4 ieee 16 std_logic_textio 0 22 8]8<fKiYoHe;_IDO3kmNH2
 R13
 R14
 R15
 !i122 257
 R16
-Z49 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder_tb.vhd
-Z50 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder_tb.vhd
+Z64 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder_tb.vhd
+Z65 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder_tb.vhd
 l0
 L8 1
 V5[Y5bl9S3zL`QN^RVaE[c1
@@ -487,15 +654,15 @@ R19
 !s110 1753858777
 !i10b 1
 !s108 1753858777.000000
-Z51 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder_tb.vhd|
-Z52 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder_tb.vhd|
+Z66 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder_tb.vhd|
+Z67 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Decoder_tb.vhd|
 !i113 0
-Z53 o-work work -2008 -explicit
+R49
 R25
 Asim
 DEx4 work 7 decoder 0 22 ZJSEldS]hBcS5bEbT_aGI1
-R47
-R48
+R42
+R63
 R13
 R14
 R15
@@ -510,31 +677,138 @@ R19
 !s110 1753713241
 !i10b 1
 !s108 1753713241.000000
-R51
-R52
+R66
+R67
 !i113 0
-R53
+R49
 R25
-Ejump_branch_unit
-Z54 w1753937961
+Eforwarding_unit
+R34
 R13
 R14
 R15
-!i122 767
+!i122 834
 R16
-Z55 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Jump_Branch_Unit.vhd
-Z56 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Jump_Branch_Unit.vhd
+Z68 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Forwarding_Unit.vhd
+Z69 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Forwarding_Unit.vhd
+l0
+L5 1
+V`@D8d?2_3dHiM]bh00i_J2
+!s100 4QbjY6970Z^TIdJ7ZT;1d0
+R19
+32
+R37
+!i10b 1
+R38
+Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Forwarding_Unit.vhd|
+Z71 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Forwarding_Unit.vhd|
+!i113 0
+R24
+R25
+Artl
+R13
+R14
+R15
+DEx4 work 15 forwarding_unit 0 22 `@D8d?2_3dHiM]bh00i_J2
+!i122 834
+l27
+L25 35
+VOQ?N>WOjY^8HCbmLo9E:V0
+!s100 QWRJY>T0GTLTgB54i^zUi1
+R19
+32
+R37
+!i10b 1
+R38
+R70
+R71
+!i113 0
+R24
+R25
+Ehazard_unit
+Z72 w1754016375
+R13
+R14
+R15
+!i122 1268
+R16
+Z73 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Hazard_Unit.vhd
+Z74 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Hazard_Unit.vhd
+l0
+L5 1
+VG1adQ2JOKQz5<^;2GnEo43
+!s100 3COi=3:Z@J`RT4Z9GmbPE2
+R19
+32
+R29
+!i10b 1
+R30
+Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Hazard_Unit.vhd|
+Z76 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Hazard_Unit.vhd|
+!i113 0
+R24
+R25
+Abehavioral
+R13
+R14
+R15
+DEx4 work 11 hazard_unit 0 22 G1adQ2JOKQz5<^;2GnEo43
+!i122 1268
+l22
+L20 19
+V_n0jFDncohOAk??T6AL9>0
+!s100 SZI8l][i7DGO;YdToY7_U0
+R19
+32
+R29
+!i10b 1
+R30
+R75
+R76
+!i113 0
+R24
+R25
+Artl
+R13
+R14
+R15
+DEx4 work 11 hazard_unit 0 22 3z5lHXZgJ>8ViXoIOJH533
+!i122 835
+l45
+L40 75
+VHJ:hM>6Q95N2RZcLRE3oU3
+!s100 EAmendYm?U:[M7YX3;HjX1
+R19
+32
+R37
+!i10b 1
+R38
+R75
+R76
+!i113 0
+R24
+R25
+R34
+Ejump_branch_unit
+Z77 w1753937961
+R13
+R14
+R15
+!i122 1260
+R16
+Z78 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Jump_Branch_Unit.vhd
+Z79 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Jump_Branch_Unit.vhd
 l0
 L6 1
 Vm[[Njof:ENFY5[7FQaUam1
 !s100 62]F7jU8D;87Mz=5jX;?J2
 R19
 32
-R20
+R53
 !i10b 1
-Z57 !s108 1753961039.000000
-Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Jump_Branch_Unit.vhd|
-Z59 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Jump_Branch_Unit.vhd|
+R54
+Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Jump_Branch_Unit.vhd|
+Z81 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Jump_Branch_Unit.vhd|
 !i113 0
 R24
 R25
@@ -543,41 +817,41 @@ R13
 R14
 R15
 DEx4 work 16 jump_branch_unit 0 22 m[[Njof:ENFY5[7FQaUam1
-!i122 767
+!i122 1260
 l27
 L23 96
 Vh^N`QmOTYBjkGnOn;_gA_1
 !s100 WKEd3nen0_1BV?R@^j3=J2
 R19
 32
-R20
+R53
 !i10b 1
-R57
-R58
-R59
+R54
+R80
+R81
 !i113 0
 R24
 R25
 Emux2to1
-Z60 w1752913040
+Z82 w1752913040
 R13
 R14
 R15
-!i122 763
+!i122 1256
 R16
-Z61 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1.vhd
-Z62 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1.vhd
+Z83 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1.vhd
+Z84 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1.vhd
 l0
 L5 1
 V3Q=G4:C=:GjX8`2DKc57b3
 !s100 2[bigeC:A4d<44:nk>QWG1
 R19
 32
-R43
+R20
 !i10b 1
 R21
-Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1.vhd|
-Z64 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1.vhd|
+Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1.vhd|
+Z86 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1.vhd|
 !i113 0
 R24
 R25
@@ -585,47 +859,47 @@ Artl
 R13
 R14
 R15
-Z65 DEx4 work 7 mux2to1 0 22 3Q=G4:C=:GjX8`2DKc57b3
-!i122 763
+Z87 DEx4 work 7 mux2to1 0 22 3Q=G4:C=:GjX8`2DKc57b3
+!i122 1256
 l16
 L14 12
 V34DMlikY^_:MMSOFS>XVe1
 !s100 d^cSWPY`2N<`ma]^D^@P30
 R19
 32
-R43
+R20
 !i10b 1
 R21
-R63
-R64
+R85
+R86
 !i113 0
 R24
 R25
 Emux2to1_tb
-Z66 w1753326223
+Z88 w1753326223
 R13
 R14
 R15
 !i122 464
 R16
-Z67 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1_tb.vhd
-Z68 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1_tb.vhd
+Z89 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1_tb.vhd
+Z90 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1_tb.vhd
 l0
 L5 1
 VE7g<M2:E3kc=@MF<0lZh^1
 !s100 0=43m23Un0hd3j7X301[F3
 R19
 32
-Z69 !s110 1753894129
+Z91 !s110 1753894129
 !i10b 1
-Z70 !s108 1753894129.000000
-Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1_tb.vhd|
-Z72 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1_tb.vhd|
+Z92 !s108 1753894129.000000
+Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1_tb.vhd|
+Z94 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux2to1_tb.vhd|
 !i113 0
 R24
 R25
 Asim
-R65
+R87
 R13
 R14
 R15
@@ -637,23 +911,23 @@ V_7`M3nD`M7Qa=@BjP6nTJ3
 !s100 41ChVnzdZ9D5ZdNkeLMad3
 R19
 32
-R69
+R91
 !i10b 1
-R70
-R71
-R72
+R92
+R93
+R94
 !i113 0
 R24
 R25
 Emux32to1
-Z73 w1753685980
+Z95 w1753685980
 R13
 R14
 R15
-!i122 765
+!i122 1258
 R16
-Z74 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to1.vhd
-Z75 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to1.vhd
+Z96 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to1.vhd
+Z97 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to1.vhd
 l0
 L5 1
 VgoUk9CSzG_S@Q[JBQSkaP3
@@ -662,9 +936,9 @@ R19
 32
 R20
 !i10b 1
-R57
-Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to1.vhd|
-Z77 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to1.vhd|
+R21
+Z98 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to1.vhd|
+Z99 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to1.vhd|
 !i113 0
 R24
 R25
@@ -673,41 +947,41 @@ R13
 R14
 R15
 DEx4 work 8 mux32to1 0 22 goUk9CSzG_S@Q[JBQSkaP3
-!i122 765
+!i122 1258
 l47
-Z78 L45 42
+Z100 L45 42
 VZ9i74>M6M7XQO;E<;]O;P1
 !s100 VzaAR;^c<Wa61]zA1QD5W2
 R19
 32
 R20
 !i10b 1
-R57
-R76
-R77
+R21
+R98
+R99
 !i113 0
 R24
 R25
 Emux32to_1
-Z79 w1753685868
+Z101 w1753685868
 R13
 R14
 R15
 !i122 95
 R16
-Z80 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to_1.vhd
-Z81 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to_1.vhd
+Z102 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to_1.vhd
+Z103 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to_1.vhd
 l0
 L5 1
 V[[5K6AB7n;D@aLlHWi6Q52
 !s100 NQ7E2Y8<akglfK@LmLLSe1
 R19
 32
-Z82 !s110 1753685875
+Z104 !s110 1753685875
 !i10b 1
-Z83 !s108 1753685875.000000
-Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to_1.vhd|
-Z85 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to_1.vhd|
+Z105 !s108 1753685875.000000
+Z106 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to_1.vhd|
+Z107 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Mux32to_1.vhd|
 !i113 0
 R24
 R25
@@ -718,39 +992,39 @@ R15
 DEx4 work 9 mux32to_1 0 22 [[5K6AB7n;D@aLlHWi6Q52
 !i122 95
 l47
-R78
+R100
 Vz?f3boDTDBnUM^8;XmzgW1
 !s100 3T22Cd_2]Jal2>zzVKl7=0
 R19
 32
-R82
+R104
 !i10b 1
-R83
-R84
-R85
+R105
+R106
+R107
 !i113 0
 R24
 R25
 Eprogram_counter
-Z86 w1753839350
+Z108 w1753839350
 R13
 R14
 R15
-!i122 769
+!i122 1262
 R16
-Z87 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Counter.vhd
-Z88 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Counter.vhd
+Z109 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Counter.vhd
+Z110 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Counter.vhd
 l0
 L5 1
 V1ILHN<m3dUGPWUgNaTa<K1
 !s100 XAG71]9iBFk6VkXH56Mlb2
 R19
 32
-R20
+R53
 !i10b 1
-R57
-Z89 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Counter.vhd|
-Z90 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Counter.vhd|
+R54
+Z111 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Counter.vhd|
+Z112 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Counter.vhd|
 !i113 0
 R24
 R25
@@ -759,41 +1033,41 @@ R13
 R14
 R15
 DEx4 work 15 program_counter 0 22 1ILHN<m3dUGPWUgNaTa<K1
-!i122 769
+!i122 1262
 l23
 L19 25
 Vj:b7YfOIPjFF]R3zMK7JI3
 !s100 [<QbMG9c_HXNEh5b=]3je0
 R19
 32
-R20
+R53
 !i10b 1
-R57
-R89
-R90
+R54
+R111
+R112
 !i113 0
 R24
 R25
 Eprogram_memory
-Z91 w1753802939
+Z113 w1753802939
 R13
 R14
 R15
-!i122 768
+!i122 1261
 R16
-Z92 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Memory.vhd
-Z93 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Memory.vhd
+Z114 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Memory.vhd
+Z115 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Memory.vhd
 l0
 L5 1
 V[40nT^zchIWN@aBlNoLUP2
 !s100 K9XKJ<FG>ceO];HW8iE4C2
 R19
 32
-R20
+R53
 !i10b 1
-R57
-Z94 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Memory.vhd|
-Z95 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Memory.vhd|
+R54
+Z116 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Memory.vhd|
+Z117 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Program_Memory.vhd|
 !i113 0
 R24
 R25
@@ -802,41 +1076,41 @@ R13
 R14
 R15
 DEx4 work 14 program_memory 0 22 [40nT^zchIWN@aBlNoLUP2
-!i122 768
+!i122 1261
 l27
 L17 44
 VCI2l<>L^4HA<^b2U<OHzF3
 !s100 lODe8TUKV@KJn]Cg[Ef<@0
 R19
 32
-R20
+R53
 !i10b 1
-R57
-R94
-R95
+R54
+R116
+R117
 !i113 0
 R24
 R25
 Ereg32
-Z96 w1753629564
+Z118 w1753629564
 R13
 R14
 R15
 !i122 465
 R16
-Z97 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32.vhd
-Z98 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32.vhd
+Z119 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32.vhd
+Z120 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32.vhd
 l0
 L5 1
 VMBfE@@dMIV;4_dBFGhn7F1
 !s100 z<Z4aJEgCYICB[=gC7MfE2
 R19
 32
-R69
+R91
 !i10b 1
-R70
-Z99 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32.vhd|
-Z100 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32.vhd|
+R92
+Z121 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32.vhd|
+Z122 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32.vhd|
 !i113 0
 R24
 R25
@@ -844,7 +1118,7 @@ Abehavioral
 R13
 R14
 R15
-Z101 DEx4 work 5 reg32 0 22 MBfE@@dMIV;4_dBFGhn7F1
+Z123 DEx4 work 5 reg32 0 22 MBfE@@dMIV;4_dBFGhn7F1
 !i122 465
 l19
 L15 26
@@ -852,41 +1126,41 @@ VBXh<hZQMEi:Xf<ecn?hQa0
 !s100 n2=i]a[f_2TCJU4CEl6_k2
 R19
 32
-R69
+R91
 !i10b 1
-R70
-R99
-R100
+R92
+R121
+R122
 !i113 0
 R24
 R25
 Ereg32_tb
-Z102 w1753630874
-R47
+Z124 w1753630874
+R42
 R13
 R14
 R15
 !i122 466
 R16
-Z103 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32_tb.vhd
-Z104 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32_tb.vhd
+Z125 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32_tb.vhd
+Z126 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32_tb.vhd
 l0
 L7 1
 VSW9?XJ^X[NDN94V5YD`^e1
 !s100 U>6kARc0j@5Zo=6ghiR?52
 R19
 33
-R69
+R91
 !i10b 1
-R70
-Z105 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32_tb.vhd|
-Z106 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32_tb.vhd|
+R92
+Z127 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32_tb.vhd|
+Z128 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/Reg32_tb.vhd|
 !i113 0
-R53
+R49
 R25
 Asim
-R101
-R47
+R123
+R42
 R13
 R14
 R15
@@ -898,23 +1172,23 @@ VH3^WDODWLl_6lh9RUHbIF3
 !s100 5P9hIJWi>lTT1aBUUCcTb3
 R19
 33
-R69
+R91
 !i10b 1
-R70
-R105
-R106
+R92
+R127
+R128
 !i113 0
-R53
+R49
 R25
 Eregfile
-Z107 w1753700043
+Z129 w1753700043
 R13
 R14
 R15
-!i122 766
+!i122 1259
 R16
-Z108 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/RegFile.vhd
-Z109 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/RegFile.vhd
+Z130 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/RegFile.vhd
+Z131 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/RegFile.vhd
 l0
 L5 1
 VheMUf=Z75ZM6XDV_`<>Pz2
@@ -923,9 +1197,9 @@ R19
 32
 R20
 !i10b 1
-R57
-Z110 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/RegFile.vhd|
-Z111 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/RegFile.vhd|
+R21
+Z132 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/RegFile.vhd|
+Z133 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/RegFile.vhd|
 !i113 0
 R24
 R25
@@ -934,7 +1208,7 @@ R13
 R14
 R15
 DEx4 work 7 regfile 0 22 heMUf=Z75ZM6XDV_`<>Pz2
-!i122 766
+!i122 1259
 l36
 L20 46
 V8[F5?N?=Cb:P118X:ozJ33
@@ -943,32 +1217,32 @@ R19
 32
 R20
 !i10b 1
-R57
-R110
-R111
+R21
+R132
+R133
 !i113 0
 R24
 R25
 Estate_decode
-Z112 w1753960544
+Z134 w1753960544
 R13
 R14
 R15
-!i122 772
+!i122 1265
 R16
-Z113 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Decode.vhd
-Z114 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Decode.vhd
+Z135 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Decode.vhd
+Z136 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Decode.vhd
 l0
 L6 1
 Vk[P?EnBoM<@4737:2YXEA1
 !s100 gV5lYN?Vm8IK5PI?0fhmn2
 R19
 32
-R36
+R29
 !i10b 1
-R37
-Z115 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Decode.vhd|
-Z116 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Decode.vhd|
+R30
+Z137 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Decode.vhd|
+Z138 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Decode.vhd|
 !i113 0
 R24
 R25
@@ -977,41 +1251,41 @@ R13
 R14
 R15
 DEx4 work 12 state_decode 0 22 k[P?EnBoM<@4737:2YXEA1
-!i122 772
+!i122 1265
 l72
 L30 81
 VYS@2ZzKB7m1Nj23RnlUUz3
 !s100 dd6hccE4@lSkY]?JjfZlC3
 R19
 32
-R36
+R29
 !i10b 1
-R37
-R115
-R116
+R30
+R137
+R138
 !i113 0
 R24
 R25
 Estate_execute
-Z117 w1753960227
+Z139 w1753982000
 R13
 R14
 R15
-!i122 773
+!i122 1266
 R16
-Z118 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Execute.vhd
-Z119 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Execute.vhd
+Z140 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Execute.vhd
+Z141 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Execute.vhd
 l0
 L5 1
 VNmZ8gF[C?Nm1cA@=GLG2k2
 !s100 3POZh>@;8CBU@9Ef@[`Xn1
 R19
 32
-R36
+R29
 !i10b 1
-R37
-Z120 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Execute.vhd|
-Z121 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Execute.vhd|
+R30
+Z142 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Execute.vhd|
+Z143 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Execute.vhd|
 !i113 0
 R24
 R25
@@ -1020,41 +1294,41 @@ R13
 R14
 R15
 DEx4 work 13 state_execute 0 22 NmZ8gF[C?Nm1cA@=GLG2k2
-!i122 773
+!i122 1266
 l74
-L35 80
-Vb2[_MFIdoVE_F^9U1z[B>3
-!s100 7H@czVIBU;CgQD^jkJa`o0
+L35 78
+V:7o_H^^j>:7<FhK^1VASi2
+!s100 _7>jL^:JIJQaCE:hC4YC;3
 R19
 32
-R36
+R29
 !i10b 1
-R37
-R120
-R121
+R30
+R142
+R143
 !i113 0
 R24
 R25
 Estate_fetch
-Z122 w1753947449
+Z144 w1753947449
 R13
 R14
 R15
-!i122 770
+!i122 1263
 R16
-Z123 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Fetch.vhd
-Z124 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Fetch.vhd
+Z145 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Fetch.vhd
+Z146 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Fetch.vhd
 l0
 L5 1
 VR]NZHUmL`5ZK8kZTEoU@k0
 !s100 NF;ke4KbJknEXO`[Q5QV?2
 R19
 32
-R36
+R53
 !i10b 1
-R37
-Z125 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Fetch.vhd|
-Z126 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Fetch.vhd|
+R54
+Z147 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Fetch.vhd|
+Z148 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_Fetch.vhd|
 !i113 0
 R24
 R25
@@ -1063,30 +1337,30 @@ R13
 R14
 R15
 DEx4 work 11 state_fetch 0 22 R]NZHUmL`5ZK8kZTEoU@k0
-!i122 770
+!i122 1263
 l58
 L29 59
 Von]:a;f88l16jV`eBU6DE0
 !s100 ];mnFSh8^mc=z=4fBahO62
 R19
 32
-R36
+R53
 !i10b 1
-R37
-R125
-R126
+R54
+R147
+R148
 !i113 0
 R24
 R25
 Estate_wb
-Z127 w1753935617
+Z149 w1753935617
 R13
 R14
 R15
-!i122 774
+!i122 1267
 R16
-Z128 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_WB.vhd
-Z129 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_WB.vhd
+Z150 8D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_WB.vhd
+Z151 FD:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_WB.vhd
 l0
 L5 1
 Vel`;0QoSWP:HNoTA?Ko>:0
@@ -1095,9 +1369,9 @@ R19
 32
 R29
 !i10b 1
-R37
-Z130 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_WB.vhd|
-Z131 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_WB.vhd|
+R30
+Z152 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_WB.vhd|
+Z153 !s107 D:/VsCode_Files/Clone/RISC-V_Core_1.0/SRC/State_WB.vhd|
 !i113 0
 R24
 R25
@@ -1106,7 +1380,7 @@ R13
 R14
 R15
 DEx4 work 8 state_wb 0 22 el`;0QoSWP:HNoTA?Ko>:0
-!i122 774
+!i122 1267
 l48
 L24 48
 VJY2`JOW1RhRUQAaa25k`V1
@@ -1115,9 +1389,9 @@ R19
 32
 R29
 !i10b 1
-R37
-R130
-R131
+R30
+R152
+R153
 !i113 0
 R24
 R25
