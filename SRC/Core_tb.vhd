@@ -52,6 +52,8 @@ begin
         load_addr <= (others => '0');
         wait for clk_period * 2;
 
+        -- Commented out test cases for manual testing
+        -- Uncomment to run specific test cases
         -- -- Test Case 1
         -- wait until rising_edge(clk);
         -- rst <= '0';
